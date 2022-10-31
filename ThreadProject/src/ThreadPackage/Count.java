@@ -1,9 +1,9 @@
 package ThreadPackage;
 
-public class Count extends Thread{//Thread Å¬·¡½º¸¦ »ó¼ÓÇØ¼­ Çü¼º
+public class Count extends Thread{//Thread í´ëž˜ìŠ¤ë¥¼ ìƒì†í•´ì„œ í˜•ì„±
 
 	@Override
-	public void run() {//Thread ½ÇÇà ½Ã ¹Ýµå½Ã run¸Þ¼Òµå ¿À¹ö¶óÀÌµù
+	public void run() {//Thread ì‹¤í–‰ ì‹œ ë°˜ë“œì‹œ runë©”ì†Œë“œ ì˜¤ë²„ë¼ì´ë”©
 		
 		for(int i=10; i>0; i--) {
 			System.out.println(i);

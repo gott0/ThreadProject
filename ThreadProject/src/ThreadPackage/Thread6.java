@@ -5,7 +5,7 @@ public class Thread6 implements Runnable {
 	@Override
 	public void run() {
 		while (true) {
-			System.out.println(Thread.currentThread().getName()); // ÇöÀç ¾²·¹µåÀÇ ÀÌ¸§À» È®ÀÎÇÏ´Â ÄÚµå(Runnable »ó¼Ó ½Ã)
+			System.out.println(Thread.currentThread().getName()); // í˜„ì¬ ì“°ë ˆë“œì˜ ì´ë¦„ì„ í™•ì¸í•˜ëŠ” ì½”ë“œ(Runnable ìƒì† ì‹œ)
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
@@ -13,5 +13,4 @@ public class Thread6 implements Runnable {
 			}
 		}
 	}
-	
 }

@@ -6,13 +6,13 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Account {
-	private int balance = 1000; // ÀÜ°í
+	private int balance = 1000; // ìž”ê³ 
 	
-	         //   ¦£ µ¿±âÈ­                              ¦£Ãâ±Ý¸Þ¼Òµå          ¦£Ã£´Â±Ý¾×     // ¾²·¹µå ³¢¸®´Â °æÇÕÇÏ±â ¶§¹®¿¡ ¼ø¼­°¡ µÚÁ×¹ÚÁ×ÀÌ´Ù
-	public /* synchronized */ void withdraw(int money) {  // µ¿±âÈ­ : ¼ø¼­¸¦ ÁöÄÑ¼­ »ç¿ëµÇ°Ô ÇÑ´Ù.(¼±ÇàµÇ´Â ¼ø¼­´Â ·£´ý)
-//(µ¿±âÈ­ Ã¹¹øÂ°¹æ¹ý = ¸Þ¼Òµå ¸®ÄÁ Å¸ÀÔ ¾Õ¿¡ synchronized ºÙÀÌ±â.¹üÀ§:¸Þ¼Òµå) // (¼±Á¡µÈ ¾²·¹µåºÎÅÍ ½ÇÇà, ½ÇÇà ¾²·¹µå°¡ ÀÏ½ÃÁ¤Áö ÇÏ¸é ´ÙÀ½ ¾²·¹µå ½ÇÇà)
+	         //   â”Œ ë™ê¸°í™”                              â”Œì¶œê¸ˆë©”ì†Œë“œ          â”Œì°¾ëŠ”ê¸ˆì•¡     // ì“°ë ˆë“œ ë¼ë¦¬ëŠ” ê²½í•©í•˜ê¸° ë•Œë¬¸ì— ìˆœì„œê°€ ë’¤ì£½ë°•ì£½ì´ë‹¤
+	public /* synchronized */ void withdraw(int money) {  // ë™ê¸°í™” : ìˆœì„œë¥¼ ì§€ì¼œì„œ ì‚¬ìš©ë˜ê²Œ í•œë‹¤.(ì„ í–‰ë˜ëŠ” ìˆœì„œëŠ” ëžœë¤)
+//(ë™ê¸°í™” ì²«ë²ˆì§¸ë°©ë²• = ë©”ì†Œë“œ ë¦¬ì»¨ íƒ€ìž… ì•žì— synchronized ë¶™ì´ê¸°.ë²”ìœ„:ë©”ì†Œë“œ) // (ì„ ì ëœ ì“°ë ˆë“œë¶€í„° ì‹¤í–‰, ì‹¤í–‰ ì“°ë ˆë“œê°€ ì¼ì‹œì •ì§€ í•˜ë©´ ë‹¤ìŒ ì“°ë ˆë“œ ì‹¤í–‰)
 									
-		synchronized (this) { // <= µ¿±âÈ­ µÎ¹øÂ° ¹æ¹ý (Ã¹¹øÂ° ¹æ¹ýº¸´Ù Àû¿ë ¹üÀ§°¡ ³Ð´Ù.¹üÀ§:Å¬·¡½º)
+		synchronized (this) { // <= ë™ê¸°í™” ë‘ë²ˆì§¸ ë°©ë²• (ì²«ë²ˆì§¸ ë°©ë²•ë³´ë‹¤ ì ìš© ë²”ìœ„ê°€ ë„“ë‹¤.ë²”ìœ„:í´ëž˜ìŠ¤)
 			if (balance >= money) { 
 
 				try {

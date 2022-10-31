@@ -13,14 +13,14 @@ public class Customer implements Runnable{
 	}
 
 	@Override
-	public void run() { //¸Ô´Â ¿ªÇÒ
+	public void run() { //ë¨¹ëŠ” ì—­í• 
 		while(true) {
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			String name = Thread.currentThread().getName(); // ¾²·¹µå ÀÌ¸§ È®ÀÎ 
+			String name = Thread.currentThread().getName(); // ì“°ë ˆë“œ ì´ë¦„ í™•ì¸ 
 			table.remove(food);
 			System.out.println(name + " ate " + food);
 		}
